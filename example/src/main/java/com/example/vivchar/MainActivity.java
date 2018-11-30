@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vivchar.example.R;
+import com.github.vivchar.viewpagerindicator.NumericViewPagerIndicator;
 import com.github.vivchar.viewpagerindicator.ViewPagerIndicator;
 
 public
@@ -19,7 +20,7 @@ class MainActivity
 		extends AppCompatActivity
 {
 
-	private ViewPagerIndicator mViewPagerIndicator;
+	private NumericViewPagerIndicator mViewPagerIndicator;
 	private ViewPager mViewPager;
 
 	@Override
@@ -28,7 +29,7 @@ class MainActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		mViewPagerIndicator = (ViewPagerIndicator) findViewById(R.id.view_pager_indicator);
+		mViewPagerIndicator = (NumericViewPagerIndicator) findViewById(R.id.view_pager_indicator);
 		mViewPager = (ViewPager) findViewById(R.id.view_pager);
 
 		mViewPager.setAdapter(new MyPagerAdapter());
@@ -43,7 +44,7 @@ class MainActivity
 		@Override
 		public
 		int getCount() {
-			return 10;
+			return 5;
 		}
 
 		@SuppressLint("SetTextI18n")
